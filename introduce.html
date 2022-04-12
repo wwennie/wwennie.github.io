@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="学生简历，大学生">
+	<title>zyw's introduce</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        *{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header{
+			height: 20px;
+			background-color: rgb(248, 156, 210);
+			border-radius: 5px;
+            margin:5px 30px;
+		}
+		.header .time{
+			font-size:medium;
+			padding-left:10px;
+            color: rgb(155, 62, 147);
+			float:left;
+		}
+		.header .other2{
+			padding-right:10px;
+			font-size:medium;
+			float:right;
+            color:rgb(155,62,147);
+		}
+
+        .footer{
+			clear:both;
+			height: 30px;
+			background-color: rgb(248, 156, 210);
+			border-radius: 10px;
+            margin:5px 30px;
+            color: rgb(196, 91, 156);
+		}
+        .footer .author{
+            text-align: center;
+        }
+
+        .main{
+            height:1200px;
+            background-color: rgb(243, 217, 247);
+            margin:5px 30px;
+        }
+        .main-box{
+            overflow: hidden;
+        }
+
+        .side-box{
+			clear:both;
+			background-color: rgb(197, 87, 190);
+			width: 120px;
+			height: 100%;
+			overflow: hidden;
+			float: left;
+			margin-bottom: 5px;
+		}
+		.side-box .profile{
+			width: 80px;
+			height:80px;
+			margin:30px 20px;
+			overflow: hidden;
+			transition: width 2s,height 2s;
+		}
+		.side-box .botton{
+			width: 80px;
+			height: 80px;
+			background-color: rgb(243, 234, 247);
+			margin:30px 20px;
+			border-radius: 50%;
+		}
+		.side-box .botton:hover{
+			background-color: rgb(218, 169, 224);
+		}
+		.side-box .profile:hover{
+			width: 100px;
+  			height: 100px;
+		}
+
+        
+        .main-box .background{
+            width:100%;
+            height: 300px;
+            background-color: rgb(167, 164, 165);
+            /* border-bottom: 2px;
+            border-bottom-color: rgb(63, 5, 41);
+            border-bottom-style:ridge; */
+            background-image: url(img/1701649702600_.pic.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .main-box .main-content{
+            width:100%;
+            /* border-bottom-color: rgb(63, 5, 41);
+            border-bottom-style: ridge ;
+            border-bottom-width:2px; */
+        }
+
+        .main-box .content1{
+            width:100%;
+            height: 298px;
+            background-color: blanchedalmond;
+            border-top-color: rgb(199, 109, 162);
+            border-top-width: 2px;
+            border-top-style: ridge; 
+        }
+        .main-box .content2{
+            width:100%;
+            height: 298px;
+            background-color: blanchedalmond;
+            border-top-color: rgb(199, 109, 162);
+            border-top-width: 2px;
+            border-top-style: ridge; 
+        }
+        .main-box .content3{
+            width:100%;
+            height: 298px;
+            background-color:rgb(167, 164, 165);
+            border-top-color: rgb(199, 109, 162);
+            border-top-width: 2px;
+            border-top-style: ridge; 
+        }
+        .main-box .background .name0{
+            float:right; 
+            margin-top: 250px;
+            font-size:larger;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: transparent;
+            background-image: url(img/new.gif);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .main-box .background .profile1{
+            float:right;
+            margin-top:200px;
+            height:150px;
+            width: 150px;
+            border-radius: 50%;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .content1 .profile{
+            width:100px;
+            height: 100%;
+            background-color: rgb(243, 217, 247);
+            float:left;
+        }
+        .content1 .picture{
+			width: 80px;
+			height:80px;
+			margin:15px 10px;
+            border-radius: 5px;
+			overflow: hidden;
+        }
+        .content1 .name{
+            height:50px;
+            padding-top: 15px;
+            background-color: rgb(243, 217, 247);
+        }
+        .content1 .detail{
+            height:218px;
+            color: rgb(196, 91, 156);
+            background-color:rgb(243, 217, 247);
+        }
+        .content1 .detail ul{
+            display: inline-block;
+            background-color: rgba(255, 189, 244, 0.884);
+            border-radius: 30px;
+            padding:20px; 
+        }
+        .content1 .result{
+            height:28px;
+            font-size: x-small;
+            background-color: rgb(243, 217, 247);
+        }
+        .content2 .profile{
+            width:100px;
+            height: 100%;
+            background-color:rgb(243, 217, 247);
+            float:left;
+        }
+        .content2 .picture{
+			width: 80px;
+			height:80px;
+			margin:15px 10px;
+            border-radius: 5px;
+			overflow: hidden;
+        }
+        .content2 .main-content{
+            background-color: rgb(243, 217, 247);
+        }
+        .content2 .name{
+            height:50px;
+            padding-top: 15px;
+            background-color:rgb(243, 217, 247);
+        }
+        .content2 .detail{
+            /* display: inline-block; */
+            height:218px;
+            background-color:rgba(255, 189, 244, 0.884);
+            border-radius: 30px;
+            display: flex;
+        }
+        .content2 .photo{
+            margin-top: 10px;
+            margin-left: 20px;
+            float:left;
+        }
+        .content2 .result{
+            height:28px;
+            font-size: x-small;
+            background-color: rgb(243, 217, 247);
+        }
+        .content3 .profile{
+            width:100px;
+            height: 100%;
+            background-color:rgb(243, 217, 247);
+            float:left;
+        }
+        .content3 .picture{
+			width: 80px;
+			height:80px;
+			margin:15px 10px;
+            border-radius: 5px;
+			overflow: hidden;
+        }
+        .content3 .name{
+            height:50px;
+            padding-top: 15px;
+            background-color: rgb(243, 217, 247);
+        }
+        .content3 .main-content{
+            background-color: rgb(243, 217, 247);
+        }
+        .content3 .detail{
+            border-radius: 30px; 
+            height:218px;
+            display: inline-block;
+            /* color: rgb(196, 90, 156); */
+            /* background-color:rgba(255, 189, 244, 0.884); */
+        }
+        .content3 .result{
+            height:28px;
+            font-size: x-small;
+            background-color: rgb(243, 217, 247);
+        }
+
+        .name1,.name2,.name3{
+            background-color: rgb(241, 201, 231);
+            display: inline-block;
+            color: rgb(155, 100, 147);
+        }
+
+        .name1:hover,.name2:hover,.name3:hover{
+            color: rgb(247, 82, 197);
+            font-style: oblique;
+            background-color: rgb(238, 168, 217);
+            font-size: x-large;
+        }
+
+        .profile .picture{
+            transition: 5s;
+        }
+        .profile .picture:hover{
+            border-radius: 50%;
+            transform: rotate(360deg);
+        }
+        .result{
+            color: rgb(155, 100, 147);
+        }
+
+        .result:hover{
+            color: rgb(247, 82, 197);
+            font-size:small;
+            font-weight: bold;
+        }
+
+        .return-box{ 
+			width: 50px;
+			height: 50px;
+			background-color:rgb(238,198,240);
+			border-width: 8px;
+			border-color: rgb(182, 8, 115) rgb(163, 38, 153) rgb(196, 91, 156) rgb(228,159,222);
+			border-style: solid;
+            position: fixed;
+            right:20px;
+            bottom: 20px;
+		}
+		.return-box:hover{
+			background-color: rgb(151, 8, 151);
+			width: 40px;
+			height: 40px;
+			border-width: 13px;
+		}
+        .detail .photo{
+            -webkit-animation-name: amplify;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-duration: 5s;
+        }
+        
+        @media (max-width:780px){
+            #photo2{
+                display: none;
+            }
+        }
+        @media (max-width:900px){
+            .side-box{
+                display: none;
+            }
+
+            .main-box{
+                width:100%;
+            }
+        }
+        @media (max-width:1100px){
+            #photo3{
+                display: none;
+            }
+        }
+        @media (max-width:1300px){
+            #photo4{
+                display: none;
+            }
+        }
+
+        @keyframes fadenum{
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes amplify{
+            0%{
+                transform: scale(1);
+            }
+            25%{
+                transform: scale(1.1);
+            }
+            50%{
+                transform: scale(1);
+            }
+            75%{
+                transform: scale(1.1);
+            }
+        }
+        #profile0{
+            animation: fadenum 15s infinite;
+        }
+        
+        @-webkit-keyframes moving{
+            from{
+                -webkit-transform: translateX(0px);
+            }
+            to{
+                -webkit-transform: translateX(30px);
+            }
+        }
+        @keyframes moving{
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateX(30px);
+            }
+        }
+        li:hover{
+            -webkit-animation: moving 1s infinite;
+            animation: moving 1s infinite;
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+    <div class="header">
+        <div class="time">
+            <strong>下午5:20 4月12日周二</strong>
+        </div>
+        <div class="other2">
+            <strong>5G 电量88%</strong>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="side-box">
+            <div class="profile">
+                <img src="img/B0E81E0F-9D6F-4622-9C7B-F167AA57990E_1_105_c.jpeg" width="120px" height="120px" alt=""> 
+            </div>
+            <div class="botton"></div>
+            <div class="botton"></div>
+            <div class="botton"></div>
+        </div>
+        <div class="main-box">
+            <div class="background">
+                <div class="picture">
+                    <!-- <img src="img/548E318B-E6E6-4EC8-80A6-232D4381F975_1_105_c.jpeg"  alt="">  -->
+                </div>
+                <div id="profile0" class="profile1">
+                    <img src="img/CCF419FD-6B57-47B4-9D11-1ACF6C1E2ECB_1_105_c.jpeg" width="150px"  alt="">
+                </div>
+                <div class="name0">
+                    <strong>
+                        20057029张雅雯 <br>统计与信息学院 信管专业
+                    </strong>
+                </div>
+            </div>
+            <div class="content1">
+                <div class="profile">
+                    <div class="picture">
+                        <img src="img/B0E81E0F-9D6F-4622-9C7B-F167AA57990E_1_105_c.jpeg" width="120px" height="120px" alt=""> 
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="name">
+                        <div class="name1">
+                            <strong>&#10148;我的基本信息</strong>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <ul>
+                            <li>性别:女</li>
+                            <li>电话:18687103077</li>
+                            <li>生日:2002年7月25日</li>
+                            <li>民族:汉族</li>
+                            <li>邮箱:813938132@qq.com</li>
+                            <li>专业:信息管理与信息系统</li>
+                        </ul>
+                    </div>
+                    <div class="result">2022年4月12日&nbsp;下午4:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;5</div>
+                </div>
+            </div>
+            <div class="content2">
+                <div class="profile">
+                    <div class="picture">
+                        <img src="img/B0E81E0F-9D6F-4622-9C7B-F167AA57990E_1_105_c.jpeg" width="120px" height="120px" alt=""> 
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="name">
+                        <div class="name2">
+                            <strong>&#10148;我的爱好&#9787;</strong>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="photo">
+                            <img src="img/1661649686202_.pic.jpg" width="180px" alt="">
+                        </div>
+                        <div id="photo1" class="photo">
+                            <img src="img/1671649686203_.pic.jpg" width="180px" alt="">
+                        </div>
+                        <div id="photo2" class="photo">
+                            <img src="img/1681649686204_.pic.jpg" width="180px" alt="">
+                        </div>
+                        <div id="photo3" class="photo">
+                            <img src="img/1691649686214_.pic_hd.jpg" width="180px" alt="">
+                        </div>
+                        <div id="photo4" class="photo">
+                            <img src="img/1711649738462_.pic.jpg" width="180px" alt="">
+                        </div>
+                    </div>
+                    <div class="result">2022年4月6日&nbsp;下午9:02&nbsp;&nbsp;昆明市&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;6</div>
+                </div>
+            </div>
+            <div class="content3">
+                <div class="profile">
+                    <div class="picture">
+                        <img src="img/B0E81E0F-9D6F-4622-9C7B-F167AA57990E_1_105_c.jpeg" width="120px" height="120px" alt=""> 
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="name">
+                        <div class="name3">
+                            <strong>&#10148;我的愿望--旅游</strong>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="giv">
+                            <img src="img/f3fda8f6b5699d524653604f0135fcd8.gif" width="300px" alt="">
+                        </div>
+                    </div>
+                    <div class="result">2022年3月26日&nbsp;下午4:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="author">
+            <p><strong>Welcome to</strong> <a href="https://zyw'sintroduce.com">zyw'sintroduce</a></p>
+        </div>
+    </div>
+
+    <div class="return-box">
+        <div class="inner">
+            <a href="web.html" target="_self">校园网模仿<br/></a>
+        </div>
+    </div>
+    
+</body>
+</html>

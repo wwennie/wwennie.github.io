@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园网模仿</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+        }
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        /* 设置头部 */
+        .header{
+            width:960px;
+            height: 60px;
+            background-color: silver;
+            margin:0 auto;
+            margin-bottom: 10px;
+        }
+        .header .left{
+            width:5%;
+            height:100%;
+            margin:0 5px;
+            background-color: red;
+            float:left;
+        }
+        .header .right{
+            width:5%;
+            height:100%;
+            margin:0 5px;
+            background-color: red;
+            float:right;
+        }
+
+        /* 设置头部 */
+        .main{
+            width:960px;
+            height: 1680px;
+            background-color: rgb(110, 71, 71);
+            margin:0 auto;
+        }
+        .guide{
+            height: 150px;
+            width:90%;
+            border-radius: 30px;
+            background-color: bisque;
+            margin:0 auto;
+            margin-bottom: 20px;
+        }
+        .guide .logo{
+            width:40%;
+            height: 100%;
+            background-color: brown;
+        }
+        .guide .li{
+            background-color: brown;
+            height:100%;
+            float: right;
+        }
+
+        .mainbox1{
+            height:520px;
+            width: 90%;
+            background-color: blanchedalmond;
+            margin:0 auto;
+            margin-bottom: 20px;
+        }
+        .mainbox1 .title{
+            width:90%;
+            height: 100px;
+            background-color: brown;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .mainbox1 .box{
+            width:90%;
+            height:410px;
+            background-color: brown;
+            margin: 0 auto;
+        }
+        .left1{
+            float: left;
+            width:45%;
+            height: 100%;
+            background-color:blanchedalmond;
+            margin-left: 10px;
+        }
+        .left1 .up,.down{
+            height:200px;
+            width:90%;
+            margin:0 auto;
+            margin-bottom: 5px;
+            background-color: darkolivegreen;
+            border-radius: 20px;
+        }
+        .down .left2{
+            height:100%;
+            width:50%;
+        }
+        .down .right2{
+            height:100%;
+            width:50%;
+        }
+        .right1 .up,.down{
+            height:200px;
+            width:90%;
+            margin:0 auto;
+            margin-bottom: 5px;
+            background-color: darkolivegreen;
+            border-radius: 20px;
+        }
+        .right1{
+            float: right;
+            width:45%;
+            height: 100%;
+            background-color:blanchedalmond;
+            margin-right: 10px;
+        }
+        .up .left2{
+            height:100%;
+            width:50%;
+        }
+        .up .right2{
+            height:100%;
+            width:50%;
+        }
+        .left>.down>.left2>.news{
+            height:40px;
+            width:90%;
+            background-color: blue;
+            margin-bottom: 0 auto;
+            float: left;
+        }
+
+
+        .mainbox2{
+            height:500px;
+            width: 90%;
+            background-color: blanchedalmond;
+            margin:0 auto;
+            margin-bottom: 20px;
+        }
+        .mainbox2 .left{
+            height:100%;
+            width:45%;
+            background-color: blueviolet;
+            float: left;
+        }
+        .left .title{
+            width:90%;
+            height: 100px;
+            background-color: brown;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .mainbox2 .left .news{
+            width:90%;
+            height:88px;
+            background-color: beige;
+            margin:0 auto;
+            margin-bottom: 5px;
+        }
+        .mainbox2 .right{
+            height:100%;
+            width:45%;
+            background-color: blueviolet;
+            float:right;
+        }
+        .right .title{
+            width:90%;
+            height: 100px;
+            background-color: brown;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        } 
+        .mainbox2 .right .news{
+            width:90%;
+            height:88px;
+            background-color: beige;
+            margin:0 auto;
+            margin-bottom: 5px;
+        }
+
+        .mainbox3{
+            height:400px;
+            width: 90%;
+            background-color: blanchedalmond;
+            margin:0 auto;
+            margin-bottom: 20px;
+        }
+        .mainbox3 .box{
+            float:left;
+            width:30%;
+            height: 100%;
+            background-color: violet;
+            margin-left: 3%;
+        }
+
+        #box1 .title{
+            width: 90%;
+            height: 100px;
+            background-color: brown;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+        #box1 .detail{
+            width:90%;
+            height:42px;
+            background-color: beige;
+            margin:0 auto;
+            margin-bottom: 5px;
+        }
+
+        #box2 .title{
+            width: 90%;
+            height: 100px;
+            background-color: brown;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+        #box2 .detail{
+            width:90%;
+            height:250px;
+            background-color: beige;
+            margin:0 auto;
+            margin-bottom: 5px;
+        }
+
+        #box3 .title{
+            width: 90%;
+            height: 100px;
+            background-color: brown;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+        #box3 .detail{
+            width:90%;
+            height:42px;
+            background-color: beige;
+            margin:0 auto;
+            margin-bottom: 5px;
+        }
+        #box3 .left{
+            width:45%;
+            height: 100%;
+            background-color: bisque;
+            float:left;
+            margin-left: 5px;
+        }
+        #box3 .right{
+            width:45%;
+            height: 100%;
+            background-color: bisque;
+            float:right;
+            margin-right: 5px;
+        }
+
+        /* 设置底部 */
+        .footer{
+            width:960px;
+            height: 60px;
+            background-color: rgb(115, 112, 150);
+            margin:0 auto;
+        }
+
+        .return-box{ 
+			width: 50px;
+			height: 50px;
+			background-color:rgb(238,198,240);
+			border-width: 8px;
+			border-color: rgb(182, 8, 115) rgb(163, 38, 153) rgb(196, 91, 156) rgb(228,159,222);
+			border-style: solid;
+            position: fixed;
+            right:20px;
+            bottom: 20px;
+		}
+		.return-box:hover{
+			background-color: rgb(151, 8, 151);
+			width: 40px;
+			height: 40px;
+			border-width: 13px;
+		}
+
+    </style>
+</head>
+<body>
+    <div id="顶部导航条" class="header">
+        
+            <div class="left"></div>
+            <div class="left"></div>
+            <div class="left"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="right"></div>
+            <div class="right"></div>
+            <div class="right"></div>
+            <div class="right"></div>
+        
+    </div>
+    <div class="main">
+        <div id="次级导航" class="guide">
+            <div class="logo"></div>
+            <div class="li"></div>
+            <div class="li"></div>
+            <div class="li"></div>
+            <div class="li"></div>
+            <div class="li"></div>
+            <div class="li"></div>
+            <div class="li"></div>
+            <div class="li"></div>
+        </div>
+        <div class="mainbox1">
+            <div class="title">title</div>
+            <div class="box">
+                <div class="left1">
+                    <div class="up"></div>
+                    <div class="down">
+                        <div class="left2">
+                            <div class="news"></div>
+                            <div class="news"></div>
+                        </div>
+                        <div class="right2">
+                            <div class="news"></div>
+                            <div class="news"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right1">
+                    <div class="up">
+                        <div class="left2">
+                            <div class="news"></div>
+                            <div class="news"></div>
+                        </div>
+                        <div class="right2">
+                            <div class="news"></div>
+                            <div class="news"></div>
+                        </div>
+                    </div>
+                    <div class="down"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mainbox2">
+            <div class="left">
+                <div class="title"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+            </div>
+            <div class="right">
+                <div class="title"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+                <div class="news"></div>
+            </div>
+        </div>
+        <div class="mainbox3">
+            <div id="box1" class="box">
+                <div class="title"></div>
+                <div class="detail"></div>
+                <div class="detail"></div>
+                <div class="detail"></div>
+                <div class="detail"></div>
+                <div class="detail"></div>
+                <div class="detail"></div>
+            </div>
+            <div id="box2" class="box">
+                <div class="title"></div>
+                <div class="detail"></div>
+            </div>
+            <div id="box3" class="box">
+                <div class="title"></div>
+                <div class="detail">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="detail">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="detail">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="detail">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="detail">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="detail">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container"></div>
+    </div>
+
+    <div class="return-box">
+        <div class="inner">
+            <a href="introduce.html" target="_self">introduce<br/></a>
+        </div>
+    </div>
+</body>
+</html>
